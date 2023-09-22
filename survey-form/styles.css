@@ -50,3 +50,68 @@ body::before {
 html {
    font-size: 62.5%;
 }
+
+#title {
+   text-align: center;
+   font-weight: 400;
+   font-size: 3.2rem;
+}
+
+#description {
+   text-align: center;
+   font-style: italic;
+   font-weight: 200;
+   opacity: 85%;
+   font-size: 1.8rem;
+   margin-bottom: 0.8em;
+   text-shadow: 1px 1px 1px #0006;
+}
+
+/* forms */
+#survey-form {
+   background: var(--color-darkblue-alpha);
+   padding: 2.5rem;
+   border-radius: 0.25rem;
+   max-width: 450px;
+   margin: 0 auto;
+}
+
+/* media query */
+@media only screen and (min-width: 768px) {
+   #survey-form {
+      max-width: 750px;
+   }
+}
+
+.cng-dir {
+   display: flex;
+   flex-direction: column;
+}
+
+.form-group:not(:last-child) {
+   margin-bottom: 1em;
+}
+
+#survey-form label {
+   font-size: 1.8rem;
+   line-height: 1.8;
+}
+
+#survey-form .form-group:first-child input {
+   height: 3.8rem;
+}
+
+#survey-form .form-group:first-child input:focus:invalid {
+   outline: 1px solid red;
+}
+
+#submit {
+   background-color: var(--color-green);
+   font-weight: bold;
+   color: var(--color-white);
+   padding: 1rem 0;
+}
+
+#textarea {
+   margin-bottom: 2rem;
+}
