@@ -62,9 +62,14 @@ a {
    width: 100%;
    margin: 0 auto;
    display: flex;
-   justify-content: center;
    align-items: center;
    flex-direction: column;
+}
+
+@media only screen and (min-width: 815px) {
+   .container {
+      align-items: stretch;
+   }
 }
 
 header {
@@ -186,6 +191,10 @@ nav {
    padding: 5px;
 }
 
+#features .desc p {
+   text-align: center;
+}
+
 @media only screen and (min-width: 815px) {
    #features .icon {
       display: flex;
@@ -200,6 +209,11 @@ nav {
       align-items: flex-start;
       padding: 0;
    }
+
+   #features .desc p {
+      text-align: left;
+   }
+   
 }
 
 .grid {
