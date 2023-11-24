@@ -57,6 +57,11 @@ a {
    cursor: pointer;
 }
 
+.btn:hover {
+   background-color: var(--clr-primary-orange);
+   transition: background-color 1s;
+}
+
 .container {
    max-width: 1000px;
    width: 100%;
@@ -82,10 +87,9 @@ header {
    align-items: center;
    flex-direction: column;
    padding: 0 2rem;
-   min-height: 75px;
+   min-height: 60px;
    background-color: #eee;
 }
-
 
 .logo > img {
    height: 100%;
@@ -94,13 +98,13 @@ header {
    justify-content: center;
    align-items: center;
    text-align: center;
-   margin-left: 20px;
 }
 
 @media only screen and (min-width: 815px) {
    header {
       height: 50px;
       flex-direction: row;
+      padding: 1.5rem 3.2rem 0 4rem;
    }
 
    .logo > img {
@@ -119,29 +123,29 @@ nav {
    justify-content: space-around;
    align-items: center;
    flex-direction: column;
-   gap: 3rem;
+   gap: 0.5rem;
 }
 
 #nav-bar ul li a {
-   font-weight: 400;
-   font-size: 1.5rem;
+   font-weight: 500;
+   font-size: 1.6rem;
 }
 
 @media only screen and (min-width: 815px) {
    #nav-bar ul {
       flex-direction: row;
-      gap: 5rem;
+      gap: 0rem;
    }
 }
 
 #hero {
    text-align: center;
-   margin: 2rem 0;
+   margin: 0 0;
 }
 
 #hero h2 {
    font-size: 2.3rem;
-   font-weight: 700;
+   font-weight: 800;
    padding: 2rem 0;
 }
 
@@ -150,7 +154,6 @@ nav {
    justify-content: center;
    align-items: center;
    flex-direction: column;
-   row-gap: 0.5rem;
 }
 
 #hero input[type='email'] {
@@ -174,7 +177,9 @@ nav {
 }
 
 #features {
-   margin-top: 3rem;
+   margin-top: 5rem;
+   display: grid;
+   gap: 4rem;
 }
 
 #features .icon {
@@ -187,7 +192,7 @@ nav {
    justify-content: center;
    align-items: center;
    height: 125px;
-   width: 80vw;
+   width: 100%;
    padding: 5px;
 }
 
@@ -196,6 +201,13 @@ nav {
 }
 
 @media only screen and (min-width: 815px) {
+
+   #features {
+      margin-top: 5rem;
+      display: grid;
+      gap: 0;
+   }
+
    #features .icon {
       display: flex;
       align-items: center;
@@ -203,6 +215,11 @@ nav {
       height: 125px;
       width: 20vw;
       color: var(--clr-primary-dark-orange);
+   }
+   
+   #features .grid:nth-child(2) .icon {
+      font-size: 2rem;
+      transform: rotateY(180deg);
    }
 
    #features .desc {
@@ -213,7 +230,6 @@ nav {
    #features .desc p {
       text-align: left;
    }
-   
 }
 
 .grid {
@@ -221,7 +237,7 @@ nav {
 }
 
 #how-it-works {
-   margin-top: 3rem;
+   margin-top: 5rem;
    display: flex;
    justify-content: center;
 }
@@ -233,7 +249,8 @@ nav {
 }
 
 #pricing {
-   margin-top: 3rem;
+   margin-top: 6rem;
+   padding-inline: 1rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -242,14 +259,19 @@ nav {
    gap: 1rem;
 }
 
+@media only screen and (min-width: 815px) {
+   #pricing {
+      gap: 2rem;
+   }
+}
+
 #pricing .product {
-   max-width: 300px;
+   max-width: 315px;
    width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
    text-align: center;
-   margin: 10px;
    border: 1px solid black;
    border-radius: 3px;
 }
@@ -297,6 +319,7 @@ footer {
    margin-top: 30px;
    background-color: #ddd;
    padding: 20px;
+   width: 100%;
 }
 
 footer > ul {
